@@ -1,23 +1,23 @@
 Pseudocode for non-recursive code :
-Algorithm birthdayCakeCandles( ) {					Time complexity
-1.	Declare numCandles							1
-2.	Input( numCandles )							1
-3.	Initialize arr[ numCandles ]						1
-4.	For i = 0 to numCandles -1  do						n+1
-Input( arr[ I ] )								n
-5.	result ← findMaxHeight ( arr , numCandles )		T( findMaxHeight )
-6.	Print ( result )							1
+Algorithm birthdayCakeCandles( ) {							Time complexity
+1.	Declare numCandles									1
+2.	Input( numCandles )									1
+3.	Initialize arr[ numCandles ]								1
+4.	For i = 0 to numCandles -1  do								n+1
+Input( arr[ I ] )										n
+5.	result ← findMaxHeight ( arr , numCandles )					T( findMaxHeight )
+6.	Print ( result )									1
 }
 T(n) => T( findMaxHeight )+ n
 findMaxHeight ( arr , numCandles ){
-1.	max ← 0 , number_of_occurs ← 0						1
-2.	for i = 0 to numCandles -1  do						n+1
-if arr[ i ] > max								n
-	max ← arr[ I ]								n
-	number_of_occurs ← 1 							n
-else if arr[ i ] == max								n
-	number_of_occurs +=1							n
-3.	return number_of_occurs 						1
+1.	max ← 0 , number_of_occurs ← 0								1
+2.	for i = 0 to numCandles -1  do								n+1
+if arr[ i ] > max										n
+	max ← arr[ I ]										n
+	number_of_occurs ← 1 									n
+else if arr[ i ] == max										n
+	number_of_occurs +=1									n
+3.	return number_of_occurs 								1
 }
 T(n) => max(n,1) => n
 The Time complexity of the whole code is n + n => Θ(n)
